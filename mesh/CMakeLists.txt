@@ -53,7 +53,7 @@ python_add_library(TARGET aabb_normals SOURCES
   src/cgal_error_emulation.hpp
   src/AABB_n_tree.h
   src/aabb_normals.cpp)
-set_property(TARGET aabb_normals PROPERTY FOLDER "GeometryExt/")
+set_property(TARGET aabb_normals PROPERTY FOLDER "geometry/")
 target_include_directories(aabb_normals PRIVATE
     ${libcgalroot}/include
     ${NUMPY_INCLUDE_PATH}
@@ -71,7 +71,7 @@ python_add_library(TARGET spatialsearch SOURCES
     
   src/spatialsearchmodule.cpp
 )
-set_property(TARGET spatialsearch PROPERTY FOLDER "GeometryExt/")
+set_property(TARGET spatialsearch PROPERTY FOLDER "geometry/")
 target_include_directories(spatialsearch PRIVATE
     ${libcgalroot}/include
     ${NUMPY_INCLUDE_PATH}
@@ -89,11 +89,11 @@ python_add_library(TARGET plyutils SOURCES
   src/plyutils.c
   src/rply.h
   src/rply.c)
-set_property(TARGET plyutils PROPERTY FOLDER "SerializationExt/")
+set_property(TARGET plyutils PROPERTY FOLDER "serialization/")
 
 # loadobj
 python_add_library(TARGET loadobj SOURCES src/py_loadobj.cpp)
 target_include_directories(loadobj PRIVATE 
   ${NUMPY_INCLUDE_PATH}
   ${Boost_INCLUDE_DIRS})
-set_property(TARGET loadobj PROPERTY FOLDER "SerializationExt/")
+set_property(TARGET loadobj PROPERTY FOLDER "serialization/")
